@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const productsPath='dist/data/products.json';
-const outputDir='dist/assets/products';
+const productsPath='data/products.json';
+const outputDir='assets/products';
 const imageWidth=480;
 const products=JSON.parse(fs.readFileSync(productsPath,'utf8'));
 fs.mkdirSync(outputDir,{recursive:true});

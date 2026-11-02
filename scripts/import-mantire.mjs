@@ -117,6 +117,6 @@ const report = {
   notes: ['One catalogue record represents one Shopify product; all variants and listed lengths are retained inside that record.', 'All image URLs come directly from the public product feed.', 'INR values are preserved and BDT values use the configured 1.30 demonstration rate.']
 };
 
-fs.writeFileSync('dist/data/products.json', JSON.stringify(products.filter(p => !invalid.includes(p)), null, 2) + '\n');
+fs.writeFileSync('data/products.json', JSON.stringify(products.filter(p => !invalid.includes(p)), null, 2) + '\n');
 fs.writeFileSync('data-validation-report.json', JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));
