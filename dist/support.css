@@ -1,0 +1,32 @@
+.support-contact{display:grid;grid-template-columns:.82fr 1.18fr;gap:8vw;background:#fbfaf6}
+.support-intro h2,.support-faqs h2,.policy-panel h2{font:500 clamp(42px,5vw,68px)/1 'Playfair Display';letter-spacing:-.035em}
+.support-intro>p:not(.eyebrow){max-width:500px;color:var(--muted);font-size:13px;line-height:1.8}
+.support-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.contact-card{background:#eeeae1;padding:26px;min-height:160px;display:flex;flex-direction:column;justify-content:space-between}
+.contact-card.wide{grid-column:1/-1}
+.contact-card span{font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold)}
+.contact-card strong{font:500 23px/1.25 'Playfair Display';margin:16px 0 8px}
+.contact-card small{color:var(--muted);font-size:10px;line-height:1.6}
+.contact-card a{color:var(--ink);text-decoration:none}
+.support-faqs{background:#e9e5dc}
+.faq-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw}
+.faq-list{border-top:1px solid #c8c2b6}
+.faq-list details{border-bottom:1px solid #c8c2b6;padding:20px 0}
+.faq-list summary{cursor:pointer;list-style:none;font:500 18px 'Playfair Display';padding-right:36px;position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:'+';position:absolute;right:4px;top:-2px;font:400 24px 'DM Sans'}
+.faq-list details[open] summary:after{content:'−'}
+.faq-list p{color:var(--muted);font-size:11px;line-height:1.75;margin:14px 36px 0 0}
+.policy-hub{display:grid;grid-template-columns:1fr 1fr;background:#17211e;color:#fff}
+.policy-panel{padding:90px 7vw;border-right:1px solid #3a4641}
+.policy-panel:last-child{border-right:0}
+.policy-panel>p{color:#adb7b2;font-size:12px;line-height:1.8}
+.policy-status{display:inline-block;border:1px solid #ad8b57;color:#d5bf99;padding:7px 10px;font-size:8px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:22px}
+.policy-list{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid #3a4641}
+.policy-list li{padding:14px 0;border-bottom:1px solid #3a4641;color:#d1d7d4;font-size:11px;line-height:1.55}
+.policy-list li:before{content:'—';color:#ad8b57;margin-right:10px}
+.policy-panel .line-link{display:inline-block;margin-top:24px}
+#contact,#faqs,#delivery,#exchange-returns{scroll-margin-top:82px}
+@media(max-width:800px){.support-contact,.faq-layout,.policy-hub{grid-template-columns:1fr}.support-contact,.faq-layout{gap:42px}.policy-panel{border-right:0;border-bottom:1px solid #3a4641}.policy-panel:last-child{border-bottom:0}}
+@media(max-width:560px){.contact-grid{grid-template-columns:1fr}.contact-card.wide{grid-column:auto}.policy-panel{padding:70px 24px}}

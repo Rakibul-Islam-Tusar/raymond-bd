@@ -1,0 +1,21 @@
+.executive-profile{display:grid;grid-template-columns:minmax(280px,.72fr) 1.28fr;background:#f3f0e8;color:var(--ink);margin-top:42px;overflow:hidden}
+.executive-photo{min-height:560px;background:#d9d2c6;position:relative;overflow:hidden}
+.executive-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.executive-photo:after{content:'';position:absolute;inset:auto 0 0;height:32%;background:linear-gradient(transparent,rgba(17,25,22,.22))}
+.executive-content{padding:56px 6vw 50px}
+.executive-role{color:var(--gold);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.16em;margin-bottom:15px}
+.executive-content h3{font:500 clamp(40px,5vw,66px)/.95 'Playfair Display';letter-spacing:-.035em;margin-bottom:22px}
+.executive-summary{font-size:14px;line-height:1.8;color:#4f5a55;max-width:720px}
+.executive-facts{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;border-top:1px solid #cec8bc;margin-top:30px}
+.executive-fact{padding:16px 0;border-bottom:1px solid #cec8bc}
+.executive-fact span{display:block;color:#7d847f;font-size:8px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+.executive-fact strong,.executive-fact a{color:var(--ink);font-size:11px;line-height:1.55;text-decoration:none}
+.executive-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.leadership-secondary{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;border:1px solid #3b4742;border-top:0;padding:26px 32px;background:#1d2925}
+.leadership-secondary .leader-monogram{width:58px;height:58px;font-size:22px}
+.leadership-secondary h3{font:500 23px 'Playfair Display';margin:0 0 5px}
+.leadership-secondary p{margin:0;color:#aeb9b5;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
+.secondary-person{display:flex;align-items:center;gap:18px}
+.leadership-source{color:#8f9a95;font-size:9px;line-height:1.7;margin:20px 0 0}
+@media(max-width:850px){.executive-profile{grid-template-columns:1fr}.executive-photo{min-height:480px;max-height:620px}.executive-content{padding:42px 28px}.leadership-secondary{grid-template-columns:1fr}}
+@media(max-width:560px){.executive-photo{min-height:390px}.executive-facts{grid-template-columns:1fr}.executive-content h3{font-size:43px}.leadership-secondary{padding:22px}.executive-actions .btn{width:100%}}

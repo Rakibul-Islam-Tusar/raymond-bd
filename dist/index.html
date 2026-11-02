@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Discover premium suiting, shirting and ready-to-wear from Raymond Bangladesh." />
+  <title>Raymond Bangladesh — The Complete Man</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261027-1" />
+  <link rel="stylesheet" href="upgrade.css?v=20261028-1" />
+  <link rel="stylesheet" href="catalogue-fix.css?v=20261027-1" />
+  <link rel="stylesheet" href="showrooms.css?v=20261027-1" />
+  <link rel="stylesheet" href="company.css?v=20261027-1" />
+  <link rel="stylesheet" href="support.css?v=20261027-1" />
+  <link rel="stylesheet" href="leadership-profile.css?v=20261027-1" />
+</head>
+<body>
+  <div class="announcement"><span>Verified showroom directory · Five Dhaka locations</span><a href="#showrooms">Find a showroom →</a></div>
+  <header class="nav-wrap">
+    <a class="brand" href="#top" aria-label="Raymond Bangladesh home"><span class="brand-mark">R</span><span>RAYMOND<small>BANGLADESH</small></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#collections">Collections</a><a href="#fabrics">Fabrics</a><a href="#calculator">Calculator</a><a href="#heritage">Our story</a><a href="#showrooms">Showrooms</a>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn search-toggle" aria-label="Search">⌕</button><button class="bag-btn" data-open-cart>Fabric list <span id="cartCount">0</span></button><button class="menu-btn" aria-label="Open menu">☰</button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="A refined gentleman in a tailored navy suit"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">The Autumn Edit · 2026</p>
+        <h1>Tailored for<br><em>your story.</em></h1>
+        <p>Exceptional fabrics, considered details, and a century of craft—now closer to home.</p>
+        <div class="hero-actions"><a class="btn light" href="#fabrics">Explore fabrics</a><a class="text-link" href="#calculator">Calculate your requirement <span>↗</span></a></div>
+      </div>
+      <div class="hero-note"><span>01</span><div><strong>The Atelier Collection</strong><small>Refined wool blends for a sharp silhouette</small></div></div>
+    </section>
+
+    <section class="intro section-pad reveal">
+      <p class="eyebrow dark">Crafted with purpose</p>
+      <h2>Cloth is where every<br><em>great look begins.</em></h2>
+      <p class="intro-text">Explore fabrics selected for Bangladesh—made for boardrooms, celebrations, and everything in between.</p>
+    </section>
+
+    <section id="collections" class="collections">
+      <article class="collection-card large"><div class="collection-img suiting"></div><div class="collection-content"><span>01</span><h3>Suiting</h3><p>Wool-rich blends and elegant finishes for confident tailoring.</p><a href="#fabrics" data-filter-link="Suiting">Discover suiting →</a></div></article>
+      <article class="collection-card"><div class="collection-img shirting"></div><div class="collection-content"><span>02</span><h3>Shirting</h3><p>Breathable cottons in enduring patterns and polished colours.</p><a href="#fabrics" data-filter-link="Shirting">Discover shirting →</a></div></article>
+      <article class="collection-card"><div class="collection-img rtw"></div><div class="collection-content"><span>03</span><h3>Ready to wear</h3><p>Modern staples, considered from collar to cuff.</p><a href="#fabrics" data-filter-link="Ready to wear">Explore the edit →</a></div></article>
+    </section>
+
+    <section id="fabrics" class="shop section-pad">
+      <div class="section-head reveal"><div><p class="eyebrow dark">Curated for you</p><h2>Find your fabric</h2></div><p>Browse our demonstration collection by category, tone, and occasion. Final availability and pricing are confirmed by your chosen showroom.</p></div>
+      <div class="toolbar">
+        <div class="tabs" role="tablist"><button class="active" data-category="All">All</button><button data-category="Suiting">Suiting</button><button data-category="Shirting">Shirting</button><button data-category="Ready to wear">Ready to wear</button></div>
+        <div class="filter-tools"><label class="search-box">⌕ <input id="productSearch" placeholder="Search name or code" /></label><select id="sortProducts" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <p class="demo-note">Product names, codes and prices shown in this prototype are illustrative.</p>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+      <div class="calc-visual"><div class="calc-visual-copy"><p class="eyebrow">Made measurable</p><h2>From idea<br>to estimate.</h2><p>Convert metres and yards, choose a fabric, and create a clear cost estimate before you visit.</p></div></div>
+      <div class="calculator-card">
+        <p class="eyebrow dark">Fabric calculator</p><h2>Plan your purchase</h2>
+        <label>Choose fabric<select id="calcFabric"></select></label>
+        <div class="input-row"><label>Quantity<input id="calcQty" type="number" min="0.1" step="0.1" value="3"></label><label>Unit<select id="calcUnit"><option value="metre">Metres</option><option value="yard">Yards</option></select></label></div>
+        <div class="conversion"><span>Converted quantity</span><strong id="convertedQty">3.281 yards</strong></div>
+        <div class="calc-line"><span>Fabric estimate</span><strong id="basePrice">৳0</strong></div>
+        <div class="calc-line"><span>Illustrative VAT (5%)</span><strong id="vatPrice">৳0</strong></div>
+        <div class="calc-total"><span>Estimated total<small>Final price confirmed at showroom</small></span><strong id="totalPrice">৳0</strong></div>
+        <button id="addCalcToCart" class="btn dark full">Add to fabric list</button>
+      </div>
+    </section>
+    <section id="heritage" class="heritage section-pad">
+      <div class="heritage-copy reveal">
+        <p class="eyebrow dark">Our story</p>
+        <h2>A legacy woven into<br><em>modern Bangladesh.</em></h2>
+        <p>Raymond has been associated with high-quality fabrics and fine suiting for almost a century. This Bangladesh experience brings that heritage into a practical showroom-led journey: discover the cloth, compare options, understand an illustrative price, and meet a specialist in Dhaka.</p>
+        <a class="line-link" href="#leadership">Meet the leadership →</a>
+      </div>
+      <div class="heritage-image"><div class="heritage-stat"><strong>Nearly a century</strong><span>Fine fabrics, tailoring culture and considered dressing</span></div></div>
+    </section>
+    <section id="leadership" class="leadership section-pad">
+      <div class="section-head">
+        <div><p class="eyebrow">Executive leadership</p><h2>Stewarding the Bangladesh business</h2></div>
+        <p>A closer view of the leadership connecting Raymond’s fabric heritage with showroom service and distribution in Bangladesh.</p>
+      </div>
+
+      <article id="amirul-islam" class="executive-profile">
+        <figure class="executive-photo">
+          <img src="assets/leadership/amirul-islam.jpg" alt="Amirul Islam, Chief Executive Officer of Raymond Bangladesh" width="400" height="400" loading="lazy" decoding="async">
+        </figure>
+        <div class="executive-content">
+          <p class="executive-role">Chief Executive Officer · Raymond Bangladesh</p>
+          <h3>Amirul Islam</h3>
+          <p class="executive-summary">Amirul Islam serves as Chief Executive Officer of Raymond Bangladesh. The Bangladesh operation is carried through Reliance Trade International, the master franchisee and domestic distributor of Raymond India in the market since 2001.</p>
+          <div class="executive-facts">
+            <div class="executive-fact"><span>Role</span><strong>Chief Executive Officer (CEO)</strong></div>
+            <div class="executive-fact"><span>Organisation</span><strong>Raymond Bangladesh</strong></div>
+            <div class="executive-fact"><span>Operating company</span><strong>Reliance Trade International</strong></div>
+            <div class="executive-fact"><span>Market relationship</span><strong>Master Franchisee &amp; Domestic Distributor</strong></div>
+            <div class="executive-fact"><span>Bangladesh operations</span><strong>Since 2001</strong></div>
+            <div class="executive-fact"><span>Contact</span><a href="tel:+8802223360171">+880 2 223360171</a></div>
+            <div class="executive-fact"><span>Office</span><strong>231, New Elephant Road, Dhaka-1205, Bangladesh</strong></div>
+          </div>
+          <div class="executive-actions"><a class="btn dark" href="tel:+8802223360171">Call the office</a><a class="btn outline" href="#showrooms">View showroom network</a></div>
+        </div>
+      </article>
+
+      <div class="leadership-secondary">
+        <div class="secondary-person"><div class="leader-monogram" aria-hidden="true">TI</div><div><h3>Toriqul Islam</h3><p>General Manager</p></div></div>
+        <a class="line-link" href="#contact">Contact customer care →</a>
+      </div>
+      <p class="leadership-source">Amirul Islam’s profile information and portrait were supplied for this prototype. The publicly listed leadership title for Toriqul Islam is retained from the Raymond Bangladesh About page.</p>
+    </section>
+
+    <section id="journal" class="journal section-pad">
+      <div class="section-head"><div><p class="eyebrow dark">The Raymond journal</p><h2>Dress with intention</h2></div><a class="line-link" href="#journal-stories">Explore the edit ↓</a></div>
+      <div id="journal-stories" class="story-grid">
+        <article>
+          <div class="story-img story-one" role="img" aria-label="Tailored suit fabric"></div>
+          <span>Fabric guide · 5 min read</span>
+          <h3>Choosing a suit fabric for Bangladesh’s climate</h3>
+          <details><summary>Read the guide</summary><p>For warm, humid days, begin with breathability and weight. Ask to feel the fabric in person, consider how often the suit will be worn, and compare wool-rich, poly-viscose and linen-blend options before choosing a finish.</p></details>
+        </article>
+        <article>
+          <div class="story-img story-two" role="img" aria-label="Man wearing a navy tailored look"></div>
+          <span>Style notes · 4 min read</span>
+          <h3>From office to occasion: the quiet power of navy</h3>
+          <details><summary>Read the guide</summary><p>Navy works because it moves easily between business, formal and social settings. Texture, weave and shirt contrast can make one colour feel distinctly different without losing its versatility.</p></details>
+        </article>
+        <article>
+          <div class="story-img story-three" role="img" aria-label="Close view of folded cloth"></div>
+          <span>Know your cloth · 6 min read</span>
+          <h3>Metres, yards and the right amount for your garment</h3>
+          <details><summary>Read the guide</summary><p>Fabric requirements depend on garment type, body measurements, fabric width, pattern matching and the tailor’s cutting plan. Use the website calculator as a planning aid, then confirm the final quantity with your tailor or showroom team.</p></details>
+        </article>
+      </div>
+    </section>
+
+    <section id="careers" class="careers section-pad">
+      <div class="careers-copy">
+        <p class="eyebrow dark">Careers</p>
+        <h2>Build a career around service and style.</h2>
+        <p>Great retail experiences are shaped by people who understand cloth, listen carefully and care about the final fit. Join the talent community for future opportunities across Raymond Bangladesh showrooms and operations.</p>
+        <div class="careers-actions"><a class="btn dark" href="mailto:info@raymondbd.com?subject=Career%20enquiry%20%E2%80%94%20Raymond%20Bangladesh">Send your profile</a><a class="btn outline" href="#showrooms">Explore showrooms</a></div>
+        <p class="careers-disclaimer">Talent-community enquiry only. No role is represented as currently open unless confirmed directly by the company.</p>
+      </div>
+      <div class="careers-list">
+        <article class="career-card"><span>Customer experience</span><h3>Retail &amp; client service</h3><p>Help customers discover fabrics, understand their options and enjoy a confident showroom journey.</p></article>
+        <article class="career-card"><span>Craft coordination</span><h3>Tailoring &amp; alterations</h3><p>Support accurate measurements, clear handovers and thoughtful coordination around fit and finish.</p></article>
+        <article class="career-card"><span>Commercial operations</span><h3>Merchandising &amp; showroom operations</h3><p>Bring together product presentation, stock awareness and consistent day-to-day retail standards.</p></article>
+      </div>
+    </section>
+
+    <section id="showrooms" class="showrooms">
+      <div class="showroom-copy"><p class="eyebrow">Personal service, nearby</p><h2>Visit a Raymond showroom</h2><p>See the weave, feel the finish, and speak with a fabric specialist. Search our demonstration locations below.</p><label class="location-search">⌖ <input id="locationSearch" placeholder="Search by area or city"><button>Search</button></label><div id="locations"></div></div>
+      <div class="map showroom-map" aria-label="Interactive showroom map"><iframe id="showroomMap" title="Raymond Bangladesh showroom location" src="https://www.google.com/maps?q=The%20Raymond%20Shop%2C%20Dhaka%2C%20Bangladesh&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-toolbar"><strong id="mapLocationName">The Raymond Shop locations in Dhaka</strong><a id="mapDirections" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Raymond%20Shop%2C%20Dhaka%2C%20Bangladesh" target="_blank" rel="noopener">Open in Google Maps ↗</a></div></div>
+    </section>
+    <section id="contact" class="support-contact section-pad">
+      <div class="support-intro">
+        <p class="eyebrow dark">Contact &amp; customer care</p>
+        <h2>Talk to the right team.</h2>
+        <p>For product availability, tailoring, quotation, delivery or after-sales questions, contact The Raymond Shop Bangladesh directly or speak with your preferred showroom before travelling.</p>
+        <div class="support-actions"><a class="btn dark" href="mailto:info@raymondbd.com">Email customer care</a><a class="btn outline" href="#showrooms">Find a showroom</a></div>
+      </div>
+      <div class="contact-grid">
+        <article class="contact-card"><span>Email</span><strong><a href="mailto:info@raymondbd.com">info@raymondbd.com</a></strong><small>General enquiries and customer-support follow-up.</small></article>
+        <article class="contact-card"><span>Public contact number</span><strong><a href="tel:+8802223360171">+880 2 223360171</a></strong><small>Call during local business hours; individual showrooms have separate numbers.</small></article>
+        <article class="contact-card wide"><span>Public website contact address</span><strong>231 New Elephant Road, Dhaka-1205</strong><small>For a store visit, use the verified five-showroom directory above and call the selected location first.</small></article>
+      </div>
+    </section>
+
+    <section id="faqs" class="support-faqs section-pad">
+      <div class="faq-layout">
+        <div><p class="eyebrow dark">Frequently asked questions</p><h2>Useful answers before you visit.</h2></div>
+        <div class="faq-list">
+          <details><summary>Are the displayed BDT prices official Bangladesh retail prices?</summary><p>No. They are illustrative conversions from publicly accessible third-party INR listings at the demo rate shown on the website. Final Bangladesh price, promotion and availability must be confirmed by the showroom.</p></details>
+          <details><summary>Can I place and pay for an order on this website?</summary><p>No. This independent prototype does not collect real payments or submit confirmed orders. Use the fabric list as a planning or quotation aid, then contact a showroom.</p></details>
+          <details><summary>How much fabric will I need?</summary><p>The amount depends on garment type, measurements, fabric width, pattern matching and the tailor’s cutting plan. Calculator results are estimates; confirm the final quantity with your tailor or showroom specialist.</p></details>
+          <details><summary>Is every fabric available at every showroom?</summary><p>Branch-level stock is not published in this prototype. Call your chosen showroom with the product name or code before visiting.</p></details>
+          <details><summary>What are the delivery area, fee and timeline?</summary><p>The public Raymond Bangladesh website currently marks delivery policy as under development. Confirm coverage, fee, timeline, courier method and payment terms directly before purchase.</p></details>
+          <details><summary>Can tailored or altered items be returned?</summary><p>Public guidance distinguishes ready-to-wear from customized clothing and notes that customized products are generally non-returnable. The exact decision depends on purchase channel and approved terms.</p></details>
+          <details><summary>Where do the catalogue images and specifications come from?</summary><p>The private prototype uses publicly accessible third-party Raymond listings for illustration, with source links and disclaimers. It is not an official Raymond or ManTire catalogue.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="policy-hub" aria-label="Customer policies">
+      <article id="delivery" class="policy-panel">
+        <span class="policy-status">Confirmation required</span>
+        <p class="eyebrow">Delivery</p>
+        <h2>Confirm the details before purchase.</h2>
+        <p>The official public site currently identifies its delivery policy as under development. This prototype therefore does not invent coverage, charges, dispatch times, cash-on-delivery or courier commitments.</p>
+        <ul class="policy-list"><li>Confirm whether delivery is available for your address.</li><li>Confirm the delivery fee and expected timeline.</li><li>Confirm product availability and the final payable amount.</li><li>Keep the showroom’s written confirmation or receipt.</li></ul>
+        <a class="line-link" href="mailto:info@raymondbd.com?subject=Delivery%20enquiry">Ask about delivery →</a>
+      </article>
+      <article id="exchange-returns" class="policy-panel">
+        <span class="policy-status">Purchase-channel specific</span>
+        <p class="eyebrow">Exchange &amp; returns</p>
+        <h2>Terms depend on what you buy.</h2>
+        <p>Public guidance states that return and exchange conditions vary by purchase location. Ready-to-wear and custom-tailored purchases are treated differently, and customized products are generally non-returnable.</p>
+        <ul class="policy-list"><li>Confirm eligibility and the allowed time window before paying.</li><li>Retain the receipt, tags, packaging and any written terms.</li><li>Inspect fabric, colour, quantity and workmanship promptly.</li><li>Report a concern to the original showroom without delay.</li></ul>
+        <a class="line-link" href="mailto:info@raymondbd.com?subject=Exchange%20and%20return%20enquiry">Contact customer care →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand"><div class="brand invert"><span class="brand-mark">R</span><span>RAYMOND<small>BANGLADESH</small></span></div><p>Refined cloth. Personal service.<br>A complete experience.</p></div><div><h4>Explore</h4><a href="#fabrics">All fabrics</a><a href="#collections">Collections</a><a href="#calculator">Calculator</a><a href="#showrooms">Showrooms</a></div><div><h4>Company</h4><a href="#heritage">Our story</a><a href="#leadership">Leadership</a><a href="#journal">Journal</a><a href="#careers">Careers</a></div><div><h4>Support</h4><a href="#contact">Contact</a><a href="#faqs">FAQs</a><a href="#delivery">Delivery</a><a href="#exchange-returns">Exchange & returns</a></div><div class="newsletter"><h4>Notes on modern dressing</h4><p>New collections, fabric knowledge, and considered style.</p><label><input id="newsletterEmail" type="email" inputmode="email" autocomplete="email" aria-label="Email address" placeholder="Email address"><button id="newsletterSubscribe" type="button" aria-label="Subscribe">→</button></label></div><div class="footer-bottom"><span>© 2026 Raymond Bangladesh · Concept experience</span><span><a href="mailto:info@raymondbd.com?subject=Privacy%20enquiry">Privacy</a><a href="#exchange-returns">Terms</a><a href="mailto:info@raymondbd.com?subject=Accessibility%20feedback">Accessibility</a></span></div></footer>
+
+  <aside id="cartDrawer" class="drawer" aria-hidden="true"><div class="drawer-head"><div><p class="eyebrow dark">Your selection</p><h2>Fabric list</h2></div><button id="closeCart" aria-label="Close">×</button></div><div id="cartItems" class="cart-items"></div><div class="drawer-total"><span>Estimated total</span><strong id="cartTotal">৳0</strong><small>Illustrative estimate; prices and availability require showroom confirmation.</small><button id="requestQuote" class="btn dark full">Request a quotation</button><button id="printQuote" class="btn outline full">Print summary</button></div></aside><div id="scrim" class="scrim"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js?v=20261027-1"></script>
+  <script src="products-inline.js?v=20261027-2"></script>
+  <script src="data-fetch-shim.js?v=20261027-2"></script>
+  <script src="upgrade.js?v=20261027-3"></script>
+  <script src="cart-bridge.js?v=20261028-1"></script>
+
+
+
+
+<!-- SHOWROOM_INLINE_START --><script>
+(() => {
+  const showrooms = [
+    {name:'Elephant Road',address:'New Elephant Road, 258/B, Dhaka-1205',area:'Elephant Road',cell:'+8801678569103',phone:'+8802223365710'},
+    {name:'Elephant Road (Center Point)',address:'Centre Point, 91, New Elephant Road, Dhaka-1205',area:'Elephant Road',cell:'+8801678569117',phone:'+8802223370227'},
+    {name:'Bashundhara City Shopping Mall',address:'Level-3, Block-D, Shop no. 82-87 & 95-99, Bashundhara City Shopping Mall, Panthapath, Dhaka-1215',area:'Panthapath',cell:'+8801678569102',phone:'+880248112827'},
+    {name:'Ring Road, Mohammadpur',address:'Urban Life Commercial Complex, Plot-18-A/4, Block-F, Mohammadpur Housing Estate, Shyamoli Ring Road, Adabor, Dhaka',area:'Mohammadpur',cell:'+8801678569110',phone:'+8802222248599'},
+    {name:'Mirpur-1',address:'M.M Islam Plaza, Plot-13, Block-B, Main Road, Mirpur-1, Dhaka',area:'Mirpur-1',cell:'+8801678569107',phone:'+802'}
+  ];
+  const esc = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const dial = value => String(value).replace(/[^+\d]/g,'');
+  const showOnMap = item => {
+    const query = ['The Raymond Shop', item.area, 'Dhaka', 'Bangladesh'].join(', ');
+    const frame=document.querySelector('#showroomMap');
+    if(frame) frame.src='https://www.google.com/maps?q=' + encodeURIComponent(query) + '&output=embed';
+    const directions=document.querySelector('#mapDirections');
+    if(directions) directions.href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(query);
+    const label=document.querySelector('#mapLocationName');
+    if(label) label.textContent=item.name;
+    document.querySelectorAll('.showroom-card').forEach(card=>card.classList.toggle('active',card.dataset.showroom===item.name));
+  };
+  const render = query => {
+    const needle=String(query||'').trim().toLowerCase();
+    const results=showrooms.filter(item=>`${item.name} ${item.address} ${item.area} dhaka`.toLowerCase().includes(needle));
+    const host=document.querySelector('#locations');
+    host.innerHTML=results.length?results.map(item=>`<article class="location-card showroom-card" data-showroom="${esc(item.name)}" tabindex="0" role="button" aria-label="Show ${esc(item.name)} on map"><div><strong>${esc(item.name)}</strong><span>${esc(item.address)}</span><button class="show-on-map" type="button">View on map →</button></div><div class="showroom-phones"><a href="tel:${dial(item.cell)}">Cell: ${esc(item.cell)}</a><a href="tel:${dial(item.phone)}">Phone: ${esc(item.phone)}</a></div></article>`).join(''):'<div class="location-card"><span>No showroom matched your search.</span></div>';
+    host.querySelectorAll('.showroom-card').forEach(card=>{
+      const item=results.find(showroom=>showroom.name===card.dataset.showroom);
+      card.addEventListener('click',event=>{if(!event.target.closest('a')) showOnMap(item)});
+      card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();showOnMap(item)}});
+    });
+  };
+  const boot = () => {
+    const input=document.querySelector('#locationSearch');
+    if(!input||!document.querySelector('#locations')) return setTimeout(boot,50);
+    const title=document.querySelector('#showrooms .showroom-copy h2');
+    const intro=document.querySelector('#showrooms .showroom-copy>p:not(.eyebrow)');
+    if(title) title.textContent='Five Dhaka showrooms';
+    if(intro) intro.textContent='Find the nearest Raymond showroom and call the team directly before your visit.';
+    input.placeholder='Search Elephant Road, Mirpur, Panthapath…';
+    input.oninput=event=>render(event.target.value);
+    const button=input.closest('label')?.querySelector('button');
+    if(button) button.onclick=event=>{event.preventDefault();render(input.value)};
+    render('');
+  };
+  boot();
+})();
+
+</script><!-- SHOWROOM_INLINE_END -->
+</body>
+</html>
+
+
+
+
+
+
+
+
